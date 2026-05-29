@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vudú · Fichaje</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Nunito:wght@400;700;900&family=DM+Mono:wght@400;500&display=swap');
+:root { --bg:#111010; --surface:#1c1b1b; --border:#2e2c2c; --cream:#f0ebe0; --red:#e63232; --green:#39d98a; --muted:#6b6868; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Nunito',sans-serif; background:var(--bg); color:var(--cream);
+  min-height:100vh; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; padding:32px 20px;
+}
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.5;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+.inner { position:relative; z-index:1; width:100%; max-width:340px; text-align:center; }
+.logo-wrap { margin-bottom:36px; }
+.logo-svg { width:100px; height:100px; margin-bottom:14px; }
+.logo-name { font-family:'Permanent Marker',cursive; font-size:42px; color:var(--cream); }
+.logo-sub { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+.btn-card {
+  display:flex; align-items:center; gap:18px;
+  background:var(--surface); border:1.5px solid var(--border);
+  border-radius:18px; padding:26px 24px;
+  text-decoration:none; color:var(--cream);
+  transition:transform 0.15s, border-color 0.2s;
+  text-align:left; margin-top:20px;
+}
+.btn-card:hover { transform:translateY(-2px); border-color:var(--green); }
+.card-icon { width:56px; height:56px; border-radius:14px; background:rgba(57,217,138,0.12); display:flex; align-items:center; justify-content:center; font-size:26px; flex-shrink:0; }
+.card-title { font-family:'Permanent Marker',cursive; font-size:20px; color:var(--green); margin-bottom:4px; }
+.card-desc { font-size:13px; color:var(--muted); line-height:1.4; }
+.arrow { margin-left:auto; font-size:22px; color:var(--muted); flex-shrink:0; }
+</style>
+</head>
+<body>
+<div class="inner">
+  <div class="logo-wrap">
+    <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="44" stroke="#f0ebe0" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="25" y1="30" x2="37" y2="42" stroke="#f0ebe0" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="37" y1="30" x2="25" y2="42" stroke="#f0ebe0" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="63" y1="30" x2="75" y2="42" stroke="#f0ebe0" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="75" y1="30" x2="63" y2="42" stroke="#f0ebe0" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M32 66 Q50 72 68 66" stroke="#f0ebe0" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+      <line x1="50" y1="70" x2="50" y2="80" stroke="#f0ebe0" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="50" cy="83" r="3.5" fill="#f0ebe0"/>
+    </svg>
+    <div class="logo-name">Vudú</div>
+    <div class="logo-sub">Control de horarios</div>
+  </div>
+
+  <a class="btn-card" href="fichaje-empleados.html">
+    <div class="card-icon">⏱️</div>
+    <div>
+      <div class="card-title">Fichar mi jornada</div>
+      <div class="card-desc">Registra tu entrada y salida.<br>Tus horas se guardan automáticamente.</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+</div>
+</body>
+</html>
